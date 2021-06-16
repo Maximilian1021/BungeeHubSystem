@@ -1,0 +1,5 @@
+name: Hub
+version: ${project.version}
+main: me.maximilian1021.main.Hub
+author: Maximilian1021
+description: HubSystem
