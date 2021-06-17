@@ -1,4 +1,4 @@
-name: Hub
+name: BungeeLobbyHub
 version: ${project.version}
 main: me.maximilian1021.main.Hub
 author: Maximilian1021

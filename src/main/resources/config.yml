@@ -1,0 +1,14 @@
+#Hier kannst du das Plugin BungeeLobbyHub konfigurieren.
+
+Prefix: '§aLobby §7|'
+
+#Gib hier die Daten für den Fallback Server an
+Haupt-Lobby: Lobby
+Adress-Hauptlobby: localhost
+Port-Hauptlobby: 25561
+
+#Gib hier die Daten für den Fallback Server an
+Fallback-Lobby: LobbyFallback
+Adress-Fallback: localhost
+Port-Fallback: 25562
+
