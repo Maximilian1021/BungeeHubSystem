@@ -1,5 +1,5 @@
 #Hier kannst du das Plugin BungeeLobbyHub konfigurieren.
-#Messeages
+#Messages
 Prefix: '§aLobby §7|'
 
 Move-to-Lobby: '§bDu wurdest auf die §6§lLobby §bgesendet!'
