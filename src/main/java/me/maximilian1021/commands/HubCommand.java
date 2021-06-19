@@ -3,7 +3,6 @@ package me.maximilian1021.commands;
 import me.maximilian1021.utils.FileManager;
 import net.md_5.bungee.api.CommandSender;
 import net.md_5.bungee.api.ProxyServer;
-import net.md_5.bungee.api.chat.TextComponent;
 import net.md_5.bungee.api.config.ServerInfo;
 import net.md_5.bungee.api.connection.ProxiedPlayer;
 import net.md_5.bungee.api.plugin.Command;
@@ -43,7 +42,7 @@ public class HubCommand extends Command {
             ProxiedPlayer p = (ProxiedPlayer) sender;
             ServerInfo Lobby = ProxyServer.getInstance().getServerInfo(configuration.getString("Haupt-Lobby"));
             ServerInfo LobbyFB = ProxyServer.getInstance().getServerInfo(configuration.getString("Fallback-Lobby"));
-            String Prefix = configuration.getString("Prefix");
+            String prefix = configuration.getString("Prefix");
 
                 try {
                     //check ob Lobby online
@@ -52,7 +51,7 @@ public class HubCommand extends Command {
                     s.close();
                     //PING SUCCESS Lobby
                     p.connect(Lobby);
-                    p.sendMessage(Prefix + " §bDu wurdest auf die §6§lLobby §bgesendet!");
+                    p.sendMessage(prefix + " " +  configuration.getString("Move-to-Lobby"));
 
                 } catch (Exception e) {
                     System.out.println(e);
@@ -62,21 +61,21 @@ public class HubCommand extends Command {
                         s.connect(new InetSocketAddress(configuration.getString("Adress-Fallback"), (configuration.getInt("Port-Fallback"))), 10);
                         s.close();
                         //PING SUCCESS Fallback
-                        p.sendMessage(Prefix + " §bDu wurdest auf die §6§lFallback Lobby §bgesendet!");
-                        p.sendMessage(Prefix + " §bDie §6Haupt Lobby §bist §cnicht §berreichbar");
+                        p.sendMessage(prefix + " " + configuration.getString( "Move-to-LobbyFB"));
+
                         p.connect(LobbyFB);
                     } catch (Exception e2) {
-                        System.out.println(e2);
+                        p.sendMessage(prefix + " " + configuration.getString("No-Lobby-Online"));
                         //PING FAILED Fallback
                     }
                 }
-            }
+            } else {
+            sender.sendMessage(configuration.getString("No-Player"));
+        }
 
-        } else {
-            sender.sendMessage("Du musst ein Spieler sein um dies zu tun");
         }
 
     }
 
-}
+
 

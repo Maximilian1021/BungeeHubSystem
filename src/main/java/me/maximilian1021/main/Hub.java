@@ -2,6 +2,7 @@ package me.maximilian1021.main;
 
 
 import me.maximilian1021.commands.HubCommand;
+import me.maximilian1021.utils.Metrics;
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;
 
@@ -16,8 +17,9 @@ public final class Hub extends Plugin {
 
     @Override
     public void onEnable() {
+        int pluginId = 11738;
+        Metrics metrics = new Metrics(this, pluginId);
         // Plugin startup logic
-        ProxyServer.getInstance().getPluginManager().registerCommand(this, new HubCommand());
         if (!getDataFolder().exists())
             getDataFolder().mkdir();
 
@@ -29,6 +31,10 @@ public final class Hub extends Plugin {
                 e.printStackTrace();
             }
         }
+
+        ProxyServer.getInstance().getPluginManager().registerCommand(this, new HubCommand());
+
+
     }
 
     @Override

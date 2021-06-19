@@ -1,6 +1,11 @@
 #Hier kannst du das Plugin BungeeLobbyHub konfigurieren.
-
+#Messeages
 Prefix: '§aLobby §7|'
+
+Move-to-Lobby: '§bDu wurdest auf die §6§lLobby §bgesendet!'
+Move-to-LobbyFB: '§bDu wurdest auf die §6§lFallback Lobby §bgesendet! §7- §bDie §6Haupt Lobby §bist §cnicht §berreichbar'
+No-Player: '§cError §7| §bDu musst ein Spieler sein um dies zu tun!'
+No-Lobby-Online: '§cError §7| §bEs ist keine Lobby online. Wenn du möchtest, kannst du das Team kontaktieren.'
 
 #Gib hier die Daten für den Fallback Server an
 Haupt-Lobby: Lobby
