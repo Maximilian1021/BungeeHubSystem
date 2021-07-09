@@ -14,15 +14,15 @@ Move-to-LobbyFB: '§bDu wurdest auf die §6§lFallback Lobby §bgesendet! §7- �
 No-Player: '§cError §7| §bDu musst ein Spieler sein um dies zu tun!'
 No-Lobby-Online: '§cError §7| §bEs ist keine Lobby online. Wenn du möchtest, kannst du das Team kontaktieren.'
 
-#Gib hier die Daten fden Haupt-Lobby Server an
-#Der Haupt-Lobby Name sollte genau so heiwie in der BungeeConfig angeben. (Beachtung von Ground Kleinschreibung)
+#Gib hier die Daten für den Haupt-Lobby Server an
+#Der Haupt-Lobby Name sollte genau so heißen wie in der BungeeConfig angeben. (Beachtung von groß und klein schreibung)
 
 Haupt-Lobby: Lobby
 Adress-Hauptlobby: localhost
 Port-Hauptlobby: 25561
 
-#Gib hier die Daten fden Fallback Server an
-#Der Fallback-Lobby Name sollte genau so heiwie in der BungeeConfig angeben. (Beachtung von Ground Kleinschreibung)
+#Gib hier die Daten für den Fallback Server an
+#Der Fallback-Lobby Name sollte genau so heißen in der BungeeConfig angeben. (Beachtung von Groß und klein schreibung)
 
 Fallback-Lobby: LobbyFallback
 Adress-Fallback: localhost
