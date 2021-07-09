@@ -13,13 +13,12 @@ import net.md_5.bungee.config.YamlConfiguration;
 import java.io.File;
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.net.Proxy;
 import java.net.Socket;
 
 public class HubCommand extends Command {
 
   //private File LangFly = (FileConfiguration) YamlConfiguration.loadConfiguration(this.file);
-  private File getConfFile = FileManager.getConf();
+  private final File getConfFile = FileManager.getConf();
 
     Configuration configuration;
 
